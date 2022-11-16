@@ -14,6 +14,6 @@
         return (0);
     }
 
-    depth += 1 + binary_tree_depth(tree->root);
+    depth += 1 + binary_tree_depth(tree->parent);
       
  }

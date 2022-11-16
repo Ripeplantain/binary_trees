@@ -1,16 +1,16 @@
 #include "binary_trees.h"
-/**
- * binary_tree_insert_left - A function that inserts a node as the left-child.
- * @parent: A pointer to a node to insert the left child in.
- * @value: The value to store in the node.
- * Return: A pointer to to created node or NULL on failure.
- */
- void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
- {
-    if (tree == NULL || func == NULL)
-        return;
 
-    func(tree->data);
-    binary_tree_preorder(tree->left,func);
-    bianry_tree_preorder(tree->right,func);    
- }
+/**
+ * binary_tree_preorder - traverses a tree with a pre-order calling func.
+ * @tree: const pointer to root node to begin traversal at.
+ * @func: function to call on tree node's data.
+ */
+void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
+{
+	if (!tree || !func)
+		return;
+
+	func(tree->n);
+	binary_tree_preorder(tree->left, func);
+	binary_tree_preorder(tree->right, func);
+}

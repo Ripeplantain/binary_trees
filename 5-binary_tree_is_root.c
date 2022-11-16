@@ -5,7 +5,7 @@
  * @value: The value to store in the node.
  * Return: A pointer to to created node or NULL on failure.
  */
- int binary_tree_is_leaf(const binary_tree_t *node)
+ int binary_tree_is_root(const binary_tree_t *node)
  {
     if (node == NULL)
     {

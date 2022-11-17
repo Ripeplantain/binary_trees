@@ -5,16 +5,11 @@
  * @value: The value to store in the node.
  * Return: A pointer to to created node or NULL on failure.
  */
- int binary_tree_is_full(const binary_tree_t *tree)
+ int binary_tree_is_perfect(const binary_tree_t *tree)
  {
     if (!tree)
         return (0);
 
     if (tree->left && tree->right)
         return (1);    
-    if (tree->left && tree->right)
-        return (binary_tree_is_full(tree->left) && binary_tree_is_full(tree->right));
-
-    return (0);    
-
  }
